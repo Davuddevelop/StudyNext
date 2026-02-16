@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="foxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B4A" />
+      <stop offset="100%" stop-color="#FF8266" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fox Ears -->
+  <path d="M160 180L100 80L210 160L160 180Z" fill="url(#foxGradient)" />
+  <path d="M352 180L412 80L302 160L352 180Z" fill="url(#foxGradient)" />
+  
+  <!-- Fox Head Shape -->
+  <path d="M256 450C180 450 110 380 110 300C110 220 180 160 256 160C332 160 402 220 402 300C402 380 332 450 256 450Z" fill="url(#foxGradient)" />
+  
+  <!-- White Face Accents (Cream) -->
+  <path d="M256 450C210 450 160 400 160 340C160 300 190 270 256 270C322 270 352 300 352 340C352 400 302 450 256 450Z" fill="#F5E6D3" />
+  
+  <!-- Nose -->
+  <circle cx="256" cy="420" r="12" fill="#0A0A0A" />
+  
+  <!-- Eyes -->
+  <circle cx="206" cy="300" r="14" fill="#0A0A0A" />
+  <circle cx="306" cy="300" r="14" fill="#0A0A0A" />
+  <circle cx="210" cy="296" r="4" fill="white" />
+  <circle cx="310" cy="296" r="4" fill="white" />
+
+  <!-- Graduation Cap (Mortarboard) -->
+  <path d="M256 80L156 130L256 180L356 130L256 80Z" fill="#1A1A1A" />
+  <path d="M206 155V180C206 180 231 195 256 195C281 195 306 180 306 180V155L256 180L206 155Z" fill="#0A0A0A" />
+  
+  <!-- Tassel -->
+  <path d="M356 130V200" stroke="#FFB74D" stroke-width="6" stroke-linecap="round" />
+  <rect x="350" y="200" width="12" height="24" rx="2" fill="#FFB74D" />
+</svg>

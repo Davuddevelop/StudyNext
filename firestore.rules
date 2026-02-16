@@ -1,0 +1,89 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============================================
+    // USERS COLLECTION - Profile & Gamification
+    // ============================================
+    match /users/{userId} {
+      // Anyone authenticated can READ user profiles (for public leaderboard)
+      allow read: if request.auth != null;
+
+      // Users can only CREATE their own profile
+      allow create: if request.auth != null
+                    && request.auth.uid == userId
+                    && validateUserProfileCreate(request.resource.data);
+
+      // Users can only UPDATE their own profile
+      // Allows partial updates while preventing XP cheating
+      allow update: if request.auth != null
+                    && request.auth.uid == userId
+                    && validateUserProfileUpdate(request.resource.data, resource.data);
+
+      // Users can only DELETE their own profile
+      allow delete: if request.auth != null
+                    && request.auth.uid == userId;
+    }
+
+    // ============================================
+    // HOMEWORK COLLECTION - Tasks & Assignments
+    // ============================================
+    match /homework/{homeworkId} {
+      // Users can only READ their own homework
+      allow read: if request.auth != null
+                  && resource.data.userId == request.auth.uid;
+
+      // Users can only CREATE homework for themselves
+      allow create: if request.auth != null
+                    && request.resource.data.userId == request.auth.uid;
+
+      // Users can only UPDATE their own homework
+      allow update: if request.auth != null
+                    && resource.data.userId == request.auth.uid
+                    && request.resource.data.userId == request.auth.uid;
+
+      // Users can only DELETE their own homework
+      allow delete: if request.auth != null
+                    && resource.data.userId == request.auth.uid;
+    }
+
+    // ============================================
+    // VALIDATION FUNCTIONS
+    // ============================================
+
+    // Validate user profile on creation
+    function validateUserProfileCreate(data) {
+      return data.uid == request.auth.uid
+             && data.keys().hasAny(['email', 'plan'])
+             && (!('plan' in data) || data.plan in ['free', 'premium']);
+    }
+
+    // Validate user profile updates
+    // - Cannot change uid or email
+    // - XP can only increase by max 500 per transaction (anti-cheat)
+    // - Allows partial updates (onboarding, displayName, etc.)
+    function validateUserProfileUpdate(newData, oldData) {
+      // Ensure uid and email are not changed if they exist
+      let uidUnchanged = !('uid' in newData) || newData.uid == oldData.uid;
+      let emailUnchanged = !('email' in newData) || newData.email == oldData.email;
+
+      // XP anti-cheat: can only increase by max 500 per update
+      let oldXp = 'xp' in oldData ? oldData.xp : 0;
+      let newXp = 'xp' in newData ? newData.xp : oldXp;
+      let xpValid = (newXp - oldXp) >= 0 && (newXp - oldXp) <= 500;
+
+      // Plan must be valid if being changed
+      let planValid = !('plan' in newData) || newData.plan in ['free', 'premium'];
+
+      return uidUnchanged && emailUnchanged && xpValid && planValid;
+    }
+
+    // ============================================
+    // DENY ALL OTHER ACCESS
+    // ============================================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Network Security Configuration for StudyNext
+    This configuration enforces HTTPS for all network connections
+    and defines trusted certificate authorities.
+-->
+<network-security-config>
+    <!-- Base configuration: Only allow HTTPS connections -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Trust system CAs for production -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Domain-specific configurations for trusted services -->
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- Firebase domains -->
+        <domain includeSubdomains="true">firebaseio.com</domain>
+        <domain includeSubdomains="true">googleapis.com</domain>
+        <domain includeSubdomains="true">firebaseapp.com</domain>
+        <domain includeSubdomains="true">google-analytics.com</domain>
+
+        <!-- RevenueCat API -->
+        <domain includeSubdomains="true">revenuecat.com</domain>
+
+        <!-- PayPal -->
+        <domain includeSubdomains="true">paypal.com</domain>
+        <domain includeSubdomains="true">paypalobjects.com</domain>
+
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+
+    <!-- Debug configuration (only applies to debug builds) -->
+    <debug-overrides>
+        <trust-anchors>
+            <!-- For development: Trust user-installed certificates -->
+            <certificates src="user" />
+            <certificates src="system" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>
