@@ -1,52 +1,29 @@
-# Dependencies
-node_modules/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Build outputs
-dist/
-build/
-
+node_modules
+dist
+dist-ssr
 # Environment files
 .env
 .env.local
-.env.*.local
+.env.test.local
+.env.production.local
+*.local
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-
-# Logs
-*.log
-npm-debug.log*
-
-# Firebase
-.firebase/
-
-# Capacitor
-android/.gradle/
-android/app/build/
-ios/App/Pods/
-
-# AI tool folders (development aids)
-.agent/
-.agents/
-.claude/
-.cursor/
-
-# Backup folders
-**/backup/
-**/backup-*/
-
-# Build logs
-*_log.txt
-*_output.txt
-*_output_utf8.txt
-
-# Misc
-nul
-*.tmp
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

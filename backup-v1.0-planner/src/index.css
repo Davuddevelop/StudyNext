@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  /* Softened Palette */
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --accent: #22d3ee;
+  --bg-color: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  /* Softer borders */
+  --border-heavy: #0f172a;
+  /* Keep for specific accents */
+  --danger: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+
+  --radius: 16px;
+  /* Rounded corners */
+  --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-heavy: 6px 6px 0px 0px #0f172a;
+
+  /* Layout Tokens */
+  --header-height: 100px;
+  /* Reduced from 120px */
+  --sidebar-width: 280px;
+  /* Reduced from 350px */
+  --container-padding: 2.5rem;
+
+  /* Typography Scale */
+  --font-main: 'Space Grotesk', sans-serif;
+  --h1-size: 3.5rem;
+  --h2-size: 2.25rem;
+  --h3-size: 1.5rem;
+  --stat-value-size: 4rem;
+  --body-large: 1.125rem;
+  --hero-padding: 3rem;
+  --avatar-size: 80px;
+  --card-padding: 2rem;
+  --grid-gap: 1.5rem;
+}
+
+/* Mobile Overrides (Phone/Small Tablet) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 80px;
+    --sidebar-width: 0px;
+    --container-padding: 1rem;
+
+    --h1-size: 2.5rem;
+    --h2-size: 1.8rem;
+    --h3-size: 1.2rem;
+    --stat-value-size: 3rem;
+    --body-large: 1rem;
+    --hero-padding: 2rem;
+    --avatar-size: 50px;
+    --card-padding: 1.5rem;
+    --grid-gap: 1rem;
+  }
+}
+
+html,
+body {
+  /* Prevent bounce effect in mobile browsers and handle notches */
+  overscroll-behavior-y: none;
+  background-color: var(--bg-color);
+  padding-top: env(safe-area-inset-top);
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.1s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 800;
+  border: 2px solid var(--border);
+  background: white;
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--border);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 6px 6px 0px 0px var(--border);
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  transition: all 0.2s;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .input {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Brand Buttons & Hover Effects */
+.btn-brand {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: 800;
+  border-radius: var(--radius);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px -4px rgba(139, 92, 246, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn-brand:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgba(139, 92, 246, 0.6);
+}
+
+.btn-glow:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px -8px rgba(139, 92, 246, 0.8);
+}
+
+.card-soft {
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card-soft:hover {
+  box-shadow: var(--shadow);
+}
+
+/* Logo Badge Utility */
+.logo-badge {
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 6px 0px 0px #0f172a;
+  border: 4px solid #0f172a;
+  width: var(--logo-size, 80px);
+  height: var(--logo-size, 80px);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logo-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
