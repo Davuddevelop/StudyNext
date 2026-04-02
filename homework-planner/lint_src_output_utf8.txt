@@ -1,0 +1,244 @@
+
+C:\Users\User\Desktop\idman\homework-planner\src\App.jsx
+  37:11  error  'currentUser' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\backup\components\ErrorBoundary.jsx
+  9:37  error  'error' is defined but never used  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\backup\components\SuccessOverlay.jsx
+  92:48  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  90 |                     height: '12px',
+  91 |                     backgroundColor: i % 3 === 0 ? 'var(--primary)' : i % 3 === 1 ? 'var(--accent)' : '#ffbd2e',
+> 92 |                     animation: `confetti ${1 + Math.random() * (didLevelUp ? 2 : 1)}s ease-out forwards`,
+     |                                                ^^^^^^^^^^^^^ Cannot call impure function
+  93 |                     '--tx': `${(Math.random() - 0.5) * 800}px`,
+  94 |                     '--ty': `${(Math.random() - 0.5) * 800}px`,
+  95 |                     '--r': `${Math.random() * 720}deg`  react-hooks/purity
+  93:33  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  91 |                     backgroundColor: i % 3 === 0 ? 'var(--primary)' : i % 3 === 1 ? 'var(--accent)' : '#ffbd2e',
+  92 |                     animation: `confetti ${1 + Math.random() * (didLevelUp ? 2 : 1)}s ease-out forwards`,
+> 93 |                     '--tx': `${(Math.random() - 0.5) * 800}px`,
+     |                                 ^^^^^^^^^^^^^ Cannot call impure function
+  94 |                     '--ty': `${(Math.random() - 0.5) * 800}px`,
+  95 |                     '--r': `${Math.random() * 720}deg`
+  96 |                 }} />                               react-hooks/purity
+  94:33  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  92 |                     animation: `confetti ${1 + Math.random() * (didLevelUp ? 2 : 1)}s ease-out forwards`,
+  93 |                     '--tx': `${(Math.random() - 0.5) * 800}px`,
+> 94 |                     '--ty': `${(Math.random() - 0.5) * 800}px`,
+     |                                 ^^^^^^^^^^^^^ Cannot call impure function
+  95 |                     '--r': `${Math.random() * 720}deg`
+  96 |                 }} />
+  97 |             ))}                                                                                                                                react-hooks/purity
+  95:31  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  93 |                     '--tx': `${(Math.random() - 0.5) * 800}px`,
+  94 |                     '--ty': `${(Math.random() - 0.5) * 800}px`,
+> 95 |                     '--r': `${Math.random() * 720}deg`
+     |                               ^^^^^^^^^^^^^ Cannot call impure function
+  96 |                 }} />
+  97 |             ))}
+  98 |                                                                                                                                                                                                                                            react-hooks/purity
+
+C:\Users\User\Desktop\idman\homework-planner\src\backup\pages\AddHomework.jsx
+   1:35  error  'useEffect' is defined but never used. Allowed unused vars must match /^[A-Z_]/u             no-unused-vars
+  14:11  error  'reminderRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  20:12  error  'error' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u        no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\backup\pages\CalendarView.jsx
+  19:12  error  'loading' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\backup\pages\Dashboard.jsx
+   34:12  error    'celebrationData' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u              no-unused-vars
+   35:11  error    'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                     no-unused-vars
+   49:8   warning  React Hook useEffect has a missing dependency: 'loadData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  115:11  error    'dueToday' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                     no-unused-vars
+  125:11  error    'dueTomorrow' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\backup\pages\HomeworkList.jsx
+  23:8   warning  React Hook useEffect has a missing dependency: 'loadData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  40:18  error    'err' is defined but never used                                                                              no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\backup\pages\Reports.jsx
+   7:18  error  'startOfWeek' is defined but never used. Allowed unused vars must match /^[A-Z_]/u           no-unused-vars
+   7:31  error  'endOfWeek' is defined but never used. Allowed unused vars must match /^[A-Z_]/u             no-unused-vars
+  13:13  error  'userProfile' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\backup\pages\Settings.jsx
+  186:58  error  'err' is defined but never used  no-unused-vars
+  257:46  error  'err' is defined but never used  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\components\EmptyState.jsx
+   1:17  error  'useMemo' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            no-unused-vars
+  21:43  error  'useState' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 no-undef
+  23:5   error  'useEffect' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-undef
+  25:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  23 |     useEffect(() => {
+  24 |         if (showQuote) {
+> 25 |             setRandomQuote(MOTIVATIONAL_QUOTES[Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length)]);
+     |             ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  26 |         }
+  27 |     }, [showQuote]);
+  28 |  react-hooks/set-state-in-effect
+
+C:\Users\User\Desktop\idman\homework-planner\src\components\ErrorBoundary.jsx
+  9:37  error  'error' is defined but never used  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\components\FocusTimer.jsx
+  18:12  error  'showTaskDropdown' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+  18:30  error  'setShowTaskDropdown' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           no-unused-vars
+  24:34  error  Error: Cannot access variable before it is declared
+
+`timer` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  22 |         if (earnXP) {
+  23 |             try {
+> 24 |                 const xpAmount = timer.XP_REWARDS[duration] || 100;
+     |                                  ^^^^^ `timer` accessed before it is declared
+  25 |                 await earnXP(xpAmount);
+  26 |             } catch (err) {
+  27 |                 console.error('Failed to award XP:', err);
+
+  18 |     const [showTaskDropdown, setShowTaskDropdown] = useState(false);
+  19 |
+> 20 |     const timer = useFocusTimer(async (duration, linkedTaskId) => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 21 |         // Timer completed - award XP
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 22 |         if (earnXP) {
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |         }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |     });
+     | ^^^^^^^^ `timer` is declared here
+  34 |
+  35 |     useEffect(() => {
+  36 |         const handleResize = () => setIsMobile(window.innerWidth < 768);  react-hooks/immutability
+
+C:\Users\User\Desktop\idman\homework-planner\src\components\SuccessOverlay.jsx
+  15:27  error  'useMemo' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-undef
+  20:35  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  18 |             i,
+  19 |             bg: i % 3 === 0 ? 'var(--primary)' : i % 3 === 1 ? 'var(--accent)' : '#ffbd2e',
+> 20 |             anim: `confetti ${1 + Math.random() * (didLevelUp ? 2 : 1)}s ease-out forwards`,
+     |                                   ^^^^^^^^^^^^^ Cannot call impure function
+  21 |             tx: `${(Math.random() - 0.5) * 800}px`,
+  22 |             ty: `${(Math.random() - 0.5) * 800}px`,
+  23 |             r: `${Math.random() * 720}deg`  react-hooks/purity
+  21:21  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  19 |             bg: i % 3 === 0 ? 'var(--primary)' : i % 3 === 1 ? 'var(--accent)' : '#ffbd2e',
+  20 |             anim: `confetti ${1 + Math.random() * (didLevelUp ? 2 : 1)}s ease-out forwards`,
+> 21 |             tx: `${(Math.random() - 0.5) * 800}px`,
+     |                     ^^^^^^^^^^^^^ Cannot call impure function
+  22 |             ty: `${(Math.random() - 0.5) * 800}px`,
+  23 |             r: `${Math.random() * 720}deg`
+  24 |         }));                  react-hooks/purity
+  22:21  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  20 |             anim: `confetti ${1 + Math.random() * (didLevelUp ? 2 : 1)}s ease-out forwards`,
+  21 |             tx: `${(Math.random() - 0.5) * 800}px`,
+> 22 |             ty: `${(Math.random() - 0.5) * 800}px`,
+     |                     ^^^^^^^^^^^^^ Cannot call impure function
+  23 |             r: `${Math.random() * 720}deg`
+  24 |         }));
+  25 |     }, [didLevelUp]);                                                                                        react-hooks/purity
+  23:19  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  21 |             tx: `${(Math.random() - 0.5) * 800}px`,
+  22 |             ty: `${(Math.random() - 0.5) * 800}px`,
+> 23 |             r: `${Math.random() * 720}deg`
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+  24 |         }));
+  25 |     }, [didLevelUp]);
+  26 |                                                                                                                                                                                       react-hooks/purity
+
+C:\Users\User\Desktop\idman\homework-planner\src\contexts\AuthContext.jsx
+   23:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+   92:14  error  'sendMagicLink' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                            no-unused-vars
+  101:14  error  'completeMagicLinkLogin' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                   no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\hooks\useFocusTimer.js
+  39:18  error  'e' is defined but never used  no-unused-vars
+  82:18  error  'e' is defined but never used  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\hooks\useReminders.js
+  4:29  error  'differenceInDays' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  9:30  error  'useCallback' is not defined                                                             no-undef
+
+C:\Users\User\Desktop\idman\homework-planner\src\pages\AddHomework.jsx
+  16:11  error  'reminderRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  40:17  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  38 |             const saved = localStorage.getItem(SUBJECTS_STORAGE_KEY);
+  39 |             if (saved) {
+> 40 |                 setRecentSubjects(JSON.parse(saved));
+     |                 ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  41 |             }
+  42 |         } catch (e) {
+  43 |             console.error('Failed to load recent subjects');  react-hooks/set-state-in-effect
+  42:18  error  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\pages\Dashboard.jsx
+    4:16  error  'useNavigate' is defined but never used. Allowed unused vars must match /^[A-Z_]/u               no-unused-vars
+   44:12  error  'celebrationData' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  710:40  error  'linkedTaskId' is defined but never used                                                         no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\pages\HomeworkList.jsx
+  40:18  error  'err' is defined but never used  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\pages\Landing.jsx
+  12:13  error  'currentUser' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  13:11  error  'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u     no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\pages\Leaderboard.jsx
+  7:26  error  'userProfile' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\pages\Reports.jsx
+   7:18  error  'startOfWeek' is defined but never used. Allowed unused vars must match /^[A-Z_]/u           no-unused-vars
+   7:31  error  'endOfWeek' is defined but never used. Allowed unused vars must match /^[A-Z_]/u             no-unused-vars
+  13:13  error  'userProfile' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\pages\Settings.jsx
+  220:58  error  'err' is defined but never used  no-unused-vars
+  275:46  error  'err' is defined but never used  no-unused-vars
+
+C:\Users\User\Desktop\idman\homework-planner\src\pages\Signup.jsx
+  15:38  error  'isFirebaseAvailable' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 58 problems (56 errors, 2 warnings)
+

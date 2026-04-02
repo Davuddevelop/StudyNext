@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(npx firebase deploy:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

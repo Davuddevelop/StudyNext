@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Backup Rules for StudyNext
+    Prevents sensitive data from being backed up via Android Auto Backup.
+    This is critical for security compliance.
+-->
+<full-backup-content>
+    <!-- Exclude all app data from backup for security -->
+    <exclude domain="sharedpref" path="." />
+    <exclude domain="database" path="." />
+    <exclude domain="file" path="." />
+    <exclude domain="external" path="." />
+
+    <!-- Specifically exclude sensitive directories -->
+    <exclude domain="root" path="shared_prefs" />
+    <exclude domain="root" path="databases" />
+    <exclude domain="root" path="cache" />
+
+    <!-- Exclude WebView data -->
+    <exclude domain="root" path="app_webview" />
+</full-backup-content>

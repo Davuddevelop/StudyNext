@@ -1,0 +1,24 @@
+{
+  "appId": "com.studynext.app",
+  "appName": "StudyNext",
+  "webDir": "dist",
+  "server": {
+    "allowNavigation": [
+      "studynext.app",
+      "*.firebaseapp.com",
+      "*.firebaseio.com",
+      "*.googleapis.com",
+      "*.paypal.com"
+    ]
+  },
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "allowsLinkPreview": false,
+    "scrollEnabled": true
+  }
+}
